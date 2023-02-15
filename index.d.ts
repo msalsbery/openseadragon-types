@@ -822,7 +822,7 @@ declare namespace OpenSeadragon {
         plus(point: Point): Point;
         rotate(degrees: number, pivot?: Point): Point;
         squaredDistanceTo(point: Point): number;
-        times(factor: number): Rect;
+        times(factor: number): Point;
         toString(): string;
     }
 
@@ -832,6 +832,7 @@ declare namespace OpenSeadragon {
         width: number;
         height: number;
         degrees: number;
+        static fromSummits(topLeft: Point, topRight: Point, bottomLeft: Point) : Rect;
         constructor(x?: number, y?: number, width?: number, height?: number, degrees?: number);
         clone(): Rect;
         containsPoint(point: Point, epsilon?: number): boolean;
@@ -846,7 +847,7 @@ declare namespace OpenSeadragon {
         getTopLeft(): Point;
         getTopRight(): Point;
         intersection(rect: Rect): Rect;
-        rotate(degrees: number, pivot?: Rect): Rect;
+        rotate(degrees: number, pivot?: Point): Rect;
         times(factor: number): Rect;
         toString(): string;
         translate(delta: Point): Rect;
