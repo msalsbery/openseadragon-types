@@ -1,3 +1,11 @@
+```
+https://www.git-scm.com/docs/git-sparse-checkout
+cd repos
+git clone --sparse --filter=blob:none --depth=1 https://github.com/openseadragon-imaging/DefinitelyTyped.git
+cd DefinitelyTyped
+git sparse-checkout add types/openseadragon
+```
+
 # Installation
 > `npm install --save @types/openseadragon`
 
