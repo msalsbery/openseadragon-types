@@ -4,6 +4,12 @@ cd repos
 git clone --sparse --filter=blob:none --depth=1 https://github.com/openseadragon-imaging/DefinitelyTyped.git
 cd DefinitelyTyped
 git sparse-checkout add types/openseadragon
+
+git sparse-checkout list
+
+git branch --list
+git checkout --track origin/ms-osd-4.0.0
+git ls-remote origin
 ```
 
 # Installation
